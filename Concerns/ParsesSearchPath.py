@@ -9,6 +9,6 @@ class ParsesSearchPath:
       if type(searchPath) is str:
           x=re.search('/[^\s,"\']+/', searchPath)
       if x:
-          return searchPath
+          return searchPath.strip()
       else:
           return []
