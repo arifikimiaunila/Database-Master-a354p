@@ -7,8 +7,7 @@ class ParsesSearchPath:
     #@return list
     def parseSearchPath(searchPath, matches, schema):
       if type(searchPath) is str:
-          re.findall('/[^\s,"\']+/', searchPath, matches)
-            
+          matches = re.findall('/[^\s,"\']+/', searchPath)
           searchPath = matches[0]
         
       if type(searchPath) is not None:
